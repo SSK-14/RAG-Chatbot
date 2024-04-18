@@ -1,4 +1,4 @@
-# RAG Chatbot
+# Build your RAG Chatbot
 
 ## Requirements ✅
 - Python 3.7 or above
@@ -57,9 +57,3 @@ docker run -p 6333:6333 -p 6334:6334 \
     -v $(pwd)/qdrant_storage:/qdrant/storage:z \
     qdrant/qdrant
 ```
-
-### Ingesting data
-
-1. Add documents needed (PDF's) to knowledge_base folder
-2. export GOOGLE_API_KEY="YOUR API KEY"
-3. Run file ```create_vectordb.py```

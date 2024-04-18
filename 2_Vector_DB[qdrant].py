@@ -5,7 +5,7 @@ from qdrant_client import QdrantClient, models
 import google.generativeai as genai
 
 PATH_TO_KNOWLEDGE_BASE = "knowledge_base" # Path where the PDFs are stored
-COLLECTION_NAME = "test_collection" # Name of the collection
+COLLECTION_NAME = "tech_radar" # Name of the collection
 
 # Set the API key by exporting it as an environment variable
 genai.configure(api_key=os.environ['GOOGLE_API_KEY']) 
@@ -13,7 +13,6 @@ genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 # Make sure qdrant docker container is running
 # Connect to the Qdrant server. 
 qdrant = QdrantClient("http://localhost:6333") 
-
 
 # Function to create embeddings of the text
 def create_embedding(text):
@@ -27,14 +26,12 @@ def create_embedding(text):
     except Exception as error:
         print(f"Error: {error}")
 
-
 # Function to create a collection in Qdrant
 def create_collection():
     qdrant.create_collection(
         collection_name=COLLECTION_NAME,
         vectors_config=models.VectorParams(size=768, distance=models.Distance.COSINE),
     )
-
 
 # Function to ingest the documents into the collection
 def ingest_document():
@@ -73,7 +70,6 @@ def ingest_document():
         except Exception as error:
             print(f"Error: {error}")
             print(f"Chunk not ingested: {i+1}")
-
 
 if __name__ == "__main__":
     create_collection()
