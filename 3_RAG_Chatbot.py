@@ -56,6 +56,7 @@ def display_chat():
         with st.chat_message("user"):
             st.markdown(user_input)
 
+        # Here is RAG flow
         search_results = search_document(user_input)
         prompt = prompt_template(user_input, search_results)
         response = generate(prompt)
