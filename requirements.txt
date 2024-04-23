@@ -7,3 +7,5 @@ langchain-text-splitters
 langchain-community
 langchain-google-genai
 pypdf
+
+sentence-transformers
