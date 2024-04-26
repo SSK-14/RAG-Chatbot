@@ -4,12 +4,12 @@ Welcome to our hands-on workshop where you'll dive into the world of building RA
 
 | Module                       | Description                                                                                     | File              |
 |-----------------------------|-------------------------------------------------------------------------------------------------|------------------------|
-| LLM Generation 🔮           | Using LLM with prompt engineering to solve a specific use case.                                 | [1_LLM_Generation.py](1_LLM_Generation.py) |
-| Vector Database 📚          | Creating a vector database from our knowledge base (PDFs) and the process of data ingestion.     | [2_Vector_DB[qdrant].py](2_Vector_DB[qdrant].py) |
-| RAG Chatbot 🤖             | Implementing a chatbot using RAG with the vector database and LLM for response generation.       | [3_RAG_Chatbot.py](3_RAG_Chatbot.py) |
-| RAG & LangChain 🔗 | Integrating LangChain library to enhance the RAG chatbot application.                             | [4_RAG_Chatbot_Langchain.py](4_RAG_Chatbot_Langchain.py) |
-| Ollama Chatbot 🦙          | Utilizing an open-source LLM running on our machine for generative AI tasks.                     | [5_Ollama_Chatbot.py](5_Ollama_Chatbot.py) |
-| Advanced RAG 📈          | Optimizing RAG with intent recognition, re-ranking, mmr.                     | [6_Advanced_RAG.py](6_Advanced_RAG.py) |
+| 🔮 LLM Generation           | Using LLM with prompt engineering to solve a specific use case.                                 | [1_LLM_Generation.py](1_LLM_Generation.py) |
+| 📚 Vector Database          | Creating a vector database from our knowledge base (PDFs) and the process of data ingestion.     | [2_Vector_DB[qdrant].py](2_Vector_DB[qdrant].py) |
+| 🤖 RAG Chatbot              | Implementing a chatbot using RAG with the vector database and LLM for response generation.       | [3_RAG_Chatbot.py](3_RAG_Chatbot.py) |
+| 🔗 RAG & LangChain  | Integrating LangChain library to enhance the RAG chatbot application.                             | [4_RAG_Chatbot_Langchain.py](4_RAG_Chatbot_Langchain.py) |
+| 🦙 Ollama Chatbot           | Utilizing an open-source LLM running on our machine for generative AI tasks.                     | [5_Ollama_Chatbot.py](5_Ollama_Chatbot.py) |
+| 📈 Advanced RAG           | Optimizing RAG with intent recognition, re-ranking, mmr.                     | [6_Advanced_RAG.py](6_Advanced_RAG.py) |
 
 ## Requirements ✅
 - Python 3.7 or above
