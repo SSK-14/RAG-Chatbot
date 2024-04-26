@@ -12,7 +12,11 @@ genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
 # Make sure qdrant docker container is running
 # Connect to the Qdrant server. 
-qdrant = QdrantClient("http://localhost:6333") 
+# qdrant = QdrantClient("http://localhost:6333") # If running locally
+qdrant = QdrantClient(
+    "xyz-example.eu-central.aws.cloud.qdrant.io",
+    api_key="<paste-your-api-key-here>",
+)
 
 # Function to create embeddings of the text
 def create_embedding(text):

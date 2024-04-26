@@ -9,7 +9,7 @@ Welcome to our hands-on workshop where you'll dive into the world of building RA
 | RAG Chatbot 🤖             | Implementing a chatbot using RAG with the vector database and LLM for response generation.       | [3_RAG_Chatbot.py](3_RAG_Chatbot.py) |
 | RAG & LangChain 🔗 | Integrating LangChain library to enhance the RAG chatbot application.                             | [4_RAG_Chatbot_Langchain.py](4_RAG_Chatbot_Langchain.py) |
 | Ollama Chatbot 🦙          | Utilizing an open-source LLM running on our machine for generative AI tasks.                     | [5_Ollama_Chatbot.py](5_Ollama_Chatbot.py) |
-
+| Advanced RAG 📈          | Optimizing RAG with intent recognition, re-ranking, mmr.                     | [6_Advanced_RAG.py](6_Advanced_RAG.py) |
 
 ## Requirements ✅
 - Python 3.7 or above
@@ -56,7 +56,14 @@ streamlit run 1_LLM_Generation.py
 
 We will be using [qdrant](https://qdrant.tech/documentation/overview/) vector database
 
-### Download and run
+### Use the Cloud 
+
+[Qdrant Cloud Sign Up](https://cloud.qdrant.io/login) 
+
+1. Create a Cluster 
+2. Get API key and cluster URL
+
+### Setup in Local
 First, download the latest Qdrant image from Dockerhub:
 ```
 docker pull qdrant/qdrant
