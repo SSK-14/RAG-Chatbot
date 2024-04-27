@@ -43,9 +43,7 @@ source {your-venvname}/bin/activate
 ```
 
 ### 3. Set up your API key
-```
-export GOOGLE_API_KEY="YOUR API KEY"
-```
+Set your API keys in the `.env` file
 
 ### 4. Running
 ```
