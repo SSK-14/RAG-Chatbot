@@ -3,3 +3,4 @@ etc/
 include/
 lib/
 share/
+.env
