@@ -3,6 +3,10 @@ from pypdf import PdfReader
 from langchain_community.chat_models import ChatOllama
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
+from dotenv import load_dotenv
+
+# Load configs from .env file
+load_dotenv()
 
 PROMPT_TEMPLATE = """You are an helpful assistant to help the Requiter to understand and analyze the candidate's resume.
 Candidate's resume is given below:

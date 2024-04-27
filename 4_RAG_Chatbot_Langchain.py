@@ -7,6 +7,11 @@ from langchain_community.vectorstores import Qdrant
 from qdrant_client import QdrantClient
 from langchain.prompts import PromptTemplate
 from langchain.globals import set_debug
+from dotenv import load_dotenv
+
+# Load configs from .env file
+load_dotenv()
+
 set_debug(True)
 
 llm = ChatGoogleGenerativeAI(model="gemini-pro")

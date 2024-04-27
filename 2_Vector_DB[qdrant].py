@@ -3,9 +3,14 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from qdrant_client import QdrantClient, models
 import google.generativeai as genai
+from dotenv import load_dotenv
+
+# Load configs from .env file
+load_dotenv()
 
 PATH_TO_KNOWLEDGE_BASE = "knowledge_base" # Path where the PDFs are stored
 COLLECTION_NAME = "tech_radar" # Name of the collection
+QDRANT_API_KEY = os.environ['QDRANT_API_KEY']
 
 # Set the API key by exporting it as an environment variable
 genai.configure(api_key=os.environ['GOOGLE_API_KEY']) 
@@ -15,7 +20,7 @@ genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 # qdrant = QdrantClient("http://localhost:6333") # If running locally
 qdrant = QdrantClient(
     "xyz-example.eu-central.aws.cloud.qdrant.io",
-    api_key="<paste-your-api-key-here>",
+    api_key=QDRANT_API_KEY,
 )
 
 # Function to create embeddings of the text

@@ -6,6 +6,10 @@ from langchain_community.cross_encoders import HuggingFaceCrossEncoder
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import Qdrant
 from qdrant_client import QdrantClient
+from dotenv import load_dotenv
+
+# Load configs from .env file
+load_dotenv()
 
 llm = ChatGoogleGenerativeAI(model="gemini-pro")
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
