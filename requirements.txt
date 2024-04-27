@@ -9,3 +9,4 @@ langchain-google-genai
 pypdf
 
 sentence-transformers
+python-dotenv

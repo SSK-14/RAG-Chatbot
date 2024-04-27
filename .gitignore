@@ -1,4 +1,5 @@
-.env
-env
-.vscode
-__pycache__/
+bin/
+etc/
+include/
+lib/
+share/
