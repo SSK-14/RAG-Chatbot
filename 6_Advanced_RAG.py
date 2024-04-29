@@ -1,4 +1,4 @@
-import json
+import json, os
 import streamlit as st
 from langchain.retrievers import ContextualCompressionRetriever
 from langchain.retrievers.document_compressors import CrossEncoderReranker
@@ -14,7 +14,8 @@ load_dotenv()
 llm = ChatGoogleGenerativeAI(model="gemini-pro")
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 
-qdrant_client = QdrantClient("http://localhost:6333") 
+# qdrant_client = QdrantClient("http://localhost:6333") 
+qdrant_client = QdrantClient(os.environ['QDRANT_URL'], api_key=os.environ['QDRANT_API_KEY'])
 qdrant = Qdrant(client=qdrant_client, collection_name="tech_radar", embeddings=embeddings)
 
 retriever = qdrant.as_retriever(search_type="mmr")

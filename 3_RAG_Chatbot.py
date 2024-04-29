@@ -9,7 +9,9 @@ load_dotenv()
 
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 model = genai.GenerativeModel('gemini-pro')
-qdrant = QdrantClient("http://localhost:6333") 
+# Connect to the Qdrant server. 
+# qdrant = QdrantClient("http://localhost:6333") # If running locally
+qdrant = QdrantClient(os.environ['QDRANT_URL'], api_key=os.environ['QDRANT_API_KEY'])
 
 if "messages" not in st.session_state:
     st.session_state.messages = []

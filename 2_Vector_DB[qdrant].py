@@ -11,6 +11,7 @@ load_dotenv()
 PATH_TO_KNOWLEDGE_BASE = "knowledge_base" # Path where the PDFs are stored
 COLLECTION_NAME = "tech_radar" # Name of the collection
 QDRANT_API_KEY = os.environ['QDRANT_API_KEY']
+QDRANT_URL = os.environ['QDRANT_URL']
 
 # Set the API key by exporting it as an environment variable
 genai.configure(api_key=os.environ['GOOGLE_API_KEY']) 
@@ -18,10 +19,7 @@ genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 # Make sure qdrant docker container is running
 # Connect to the Qdrant server. 
 # qdrant = QdrantClient("http://localhost:6333") # If running locally
-qdrant = QdrantClient(
-    "xyz-example.eu-central.aws.cloud.qdrant.io",
-    api_key=QDRANT_API_KEY,
-)
+qdrant = QdrantClient(QDRANT_URL, api_key=QDRANT_API_KEY)
 
 # Function to create embeddings of the text
 def create_embedding(text):

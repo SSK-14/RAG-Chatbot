@@ -37,13 +37,9 @@ source {your-venvname}/bin/activate
 pip3 install -r requirements.txt
 ```
 
-- Activate your virtual environment
-```
-source {your-venvname}/bin/activate
-```
 
 ### 3. Set up your API key
-Set your API keys in the `.env` file
+Set your API keys in the `.env` file by copying `.env.tmpl`
 
 ### 4. Running
 ```
